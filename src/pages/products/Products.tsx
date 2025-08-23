@@ -34,7 +34,7 @@ const Products: React.FC = () => {
             <div className="w-full h-[280px]">
               <img src={product?.thumbnail} alt="img" className="hover:scale-105 duration-300 cursor-pointer"/>
             </div>
-            <h1 className="line-clamp-1 text-2xl font-medium">{product?.title}</h1>
+            <h1 className="line-clamp-1 text-[25px] font-medium">{product?.title}</h1>
             <h3 className="text-xl capitalize">{product?.category}</h3>
             <p className="line-clamp-3 text-gray-700">{product?.description}</p>
             <strong className="text-green-700">${product?.price}</strong>
