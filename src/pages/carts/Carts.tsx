@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const Carts = () => {
   const [carts, setCarts] = useState<any[]>([]);
-  // const [loading, setLoading] = useState<boolean>(true)
+  const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
       (async () => {
@@ -13,7 +13,7 @@ const Carts = () => {
         const data = response.data
         setCarts(data.carts)
         console.log(data.carts)
-        // setLoading(false)
+        setLoading(false)
       })()
 
   }, [])
@@ -22,12 +22,13 @@ const Carts = () => {
   return (
     <>
     <div className="main-container">
-      {/* {loading? <div className="loading-box">
+      {loading? <div className="loading-box">
         <div className="loading-spinner"></div>
         Loading...
-      </div> : null} */}
+      </div> : null}
       {carts?.map(cart => (
         <div className="card-container" key={cart.id}>
+          <h1>Cart ID: {cart.id}</h1>
           <h1>Total price: {cart.total}</h1>
           <h2>Total products: {cart.totalProducts}</h2>
           <h3>Total quantity: {cart.totalQuantity}</h3>
