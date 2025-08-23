@@ -28,6 +28,7 @@ const Carts = () => {
       </div> : null}
       {carts?.map(cart => (
         <div className="card-container" key={cart.id}>
+          <h1>Cart ID: {cart.id}</h1>
           <h1>Total price: {cart.total}</h1>
           <h2>Total products: {cart.totalProducts}</h2>
           <h3>Total quantity: {cart.totalQuantity}</h3>
