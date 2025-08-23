@@ -1,0 +1,55 @@
+.main-container {
+  width: 100%;
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe-card {
+  width: 400px;
+  padding: 5px;
+  height: auto;
+  margin: auto;
+  border: 1px solid black;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all ease 0.5s;
+}
+
+.loading-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh; 
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.loading-spinner {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@starting-style {
+  .recipe-card {
+    opacity: 0;
+    transform: scale(0.9);
+    filter: blur(10px);
+  }
+}
