@@ -4,7 +4,6 @@ import { api } from "../../api";
 import { useEffect, useState } from "react";
 
 const Carts = () => {
-
   const [carts, setCarts] = useState<any[]>([]);
   // const [loading, setLoading] = useState<boolean>(true)
 

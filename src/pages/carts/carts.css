@@ -6,6 +6,7 @@
   width: 100%;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: red;
 }
 .card-container {
   padding: 10px;
